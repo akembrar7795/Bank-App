@@ -10,7 +10,7 @@ namespace Exercise2
     {
         public string Name { get; set; }
         public double Balance { get; set; }
-        
+
         //constructor
         public Methods(string name, double balance)
         {
@@ -18,6 +18,7 @@ namespace Exercise2
             Balance = balance;
         }
 
+        //Methods
 
         public double Withdraw(double withdrawAmmount)
         {
@@ -29,6 +30,25 @@ namespace Exercise2
         {
             double newBalance = Balance + AmmountDeposit;
             return newBalance;
+        }
+
+        public double AddAmmount ( double ammount)
+        {
+            double newBalance = Balance + ammount;
+            return newBalance;
+        }
+
+        public double SubtractAmmount (double ammount)
+        {
+            double newBalance = Balance - ammount;
+            return newBalance;
+        }
+
+        public void Transaction ( double transactionAmm)
+        {
+            Balance += transactionAmm;
+            Methods name = new Methods(Name, Balance);
+            name.AddAmmount(transactionAmm);
         }
     }
 }
