@@ -10,6 +10,7 @@ namespace Exercise2
     {
         public string Name { get; set; }
         public double Balance { get; set; }
+        public Guid OwnerId { get; set; }
 
         //constructor
         public Methods(string name, double balance)
@@ -19,28 +20,31 @@ namespace Exercise2
         }
 
         //Methods
-
         public double Withdraw(double withdrawAmmount)
         {
             double remaining = Balance - withdrawAmmount;
+            Balance = remaining;
             return remaining;
         }
 
         public double Deposit( double AmmountDeposit)
         {
             double newBalance = Balance + AmmountDeposit;
+            Balance = newBalance;
             return newBalance;
         }
 
         public double AddAmmount ( double ammount)
         {
             double newBalance = Balance + ammount;
+            Balance = newBalance;
             return newBalance;
         }
 
         public double SubtractAmmount (double ammount)
         {
             double newBalance = Balance - ammount;
+            Balance = newBalance;
             return newBalance;
         }
 
