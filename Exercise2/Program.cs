@@ -14,10 +14,10 @@ namespace Exercise2
             Methods Loves = new Methods("Love", 500);
 
             ////Menu
+            Console.WriteLine("Welcome to Brar Bank");
             int number = 1;
             while (number != 5)
             {
-                Console.WriteLine("Welcome to Brar Bank");
                 Console.WriteLine("1. Check Balance\n" +
                     "2. Deposit\n" +
                     "3. Withdraw\n" +
@@ -27,6 +27,7 @@ namespace Exercise2
 
                 if (initialAnswer == 1)
                 {
+                    //Balance
                     Console.WriteLine("Do you wish to check your Account balance (y/n)");
                     string answer = Console.ReadLine();
                     if (answer == "y")
@@ -113,7 +114,6 @@ namespace Exercise2
                             Console.WriteLine(Akems.Name + " Your Remaining balance is: " + Akems.SubtractAmmount(transAmm));
                             Loves.Transaction(transAmm);
 
-
                             Console.WriteLine("love do you want to see your balance (y/n)");
                             string answer = Console.ReadLine();
                             if (answer == "y")
@@ -133,7 +133,6 @@ namespace Exercise2
                             Console.WriteLine(Loves.Name + " Your Remaining balance is: " + Loves.SubtractAmmount(transAmm));
                             Akems.Transaction(transAmm);
 
-
                             Console.WriteLine("akem do you want to see your balance (y/n)");
                             string answer = Console.ReadLine();
                             if (answer == "y")
@@ -145,6 +144,11 @@ namespace Exercise2
                                 Console.WriteLine("Thank you!");
                             }
                         }
+                        Console.ReadLine();
+                    }
+                    else if (transAns == "n")
+                    {
+                        Console.WriteLine("Thanks for choosing Brar Bank.");
                         Console.ReadLine();
                     }
                 }
