@@ -32,8 +32,13 @@ namespace Exercise2
                     string answer = Console.ReadLine();
                     if (answer == "y")
                     {
-                        Console.WriteLine(Akems.Name + " your remaining balance is: " + Akems.Balance);
-                        Console.WriteLine(Loves.Name + " your balance is: " + Loves.Balance);
+                        Console.WriteLine("Enter a 4 Digit code");
+                        int code = int.Parse(Console.ReadLine());
+                        if (code == 7795)
+                        {
+                            Console.WriteLine(Akems.Name + " your remaining balance is: " + Akems.Balance);
+                            Console.WriteLine(Loves.Name + " your balance is: " + Loves.Balance);
+                        }
                     }
                     else if (answer == "n")
                     {
